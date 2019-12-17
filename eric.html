@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="container">
+        <h1>Title</h1>
+        <h2 id="question"></h2>
+        <div id="options">
+            <button id="true">True</button>
+            <button id="false">False</button>
+        </div>
+    </div>
+    <script type="text/javascript">
+        var someQuestions = [{
+            q: "Kangaroos can't jump backwards",
+            a: "t"
+        }, {
+            q: "Darth Vader, you are NOT THE FATHER",
+            a: "f"
+        }, {
+            q: "You can succeed without effort...",
+            a: "f"
+        }];
+        var roundTime = 5000;
+        var activeQuestion;
+        var countdownId;
+        function startGame() {
+            activeQuestion = someQuestions[Math.floor(Math.random() * someQuestions.length)];
+            $("#question").text(activeQuestion.q);
+            countdownId = setTimeout(function () {
+                alert("TIMES UP, TO BAD");
+                if (activeQuestion.a === "t") {
+                    alert("THAT WAS TRUE");
+                } else {
+                    alert("THAT WAS FALSE");
+                }
+                window.location.reload();
+            }, roundTime)
+        }
+        function answerTrue() {
+            clearTimeout(countdownId);
+            alert("I SAY THAT'S TRUE")
+            console.log(activeQuestion.a);
+            if (activeQuestion.a === "t") {
+                alert("YOU GOT IT RIGHT!");
+            } else {
+                alert("ACTUALLY THAT WAS FALSE");
+            }
+            window.location.reload();
+        }
+        function answerFalse() {
+            clearTimeout(countdownId);
+            alert("I SAY THAT'S WRONG")
+            if (activeQuestion.a === "t") {
+                alert("ACTUALLY THAT WAS TRUE");
+            } else {
+                alert("YOU GOT IT RIGHT");
+            }
+            window.location.reload();
+        }
+        $("#true").click(function (event) {
+            answerTrue();
+        })
+        $("#false").click(function (event) {
+            answerFalse();
+        })
+        $(document).on("keyup", function (event) {
+            var key = event.key;
+            if (key.toLowerCase() === "t") {
+                answerTrue();
+            } else if (key.toLowerCase() === "f") {
+                answerFalse();
+            }
+        })
+        startGame();
+    </script>
+</body>
+</html>
