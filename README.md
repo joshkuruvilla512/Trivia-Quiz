@@ -2,6 +2,8 @@
 <strong><p>Here is a simple quiz that discusses questions from the show, The Office!
 There are only 7 questions!</p></strong>
 
+![](https://user-images.githubusercontent.com/57737037/71058813-9d509800-2126-11ea-8ae6-be10a9ca1039.png)
+
 <h2>How to Play!</h2>
 1. Click/Press on "Start Quiz!"
 <br>
