@@ -150,7 +150,7 @@ function renderCounter(){
     }
 }
 
-// checkAnwer
+// checkAnswer
 
 function checkAnswer(answer){
     if( answer == questions[runningQuestion].correct){
@@ -201,3 +201,7 @@ function scoreRender(){
     scoreDiv.innerHTML = "<img src="+ img +">";
     scoreDiv.innerHTML += "<p>"+ scorePerCent +"%</p>";
 }
+// Restart Game
+function restartGame() {
+    window.location.reload();
+};
