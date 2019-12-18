@@ -9,7 +9,12 @@ There are only 7 questions!</p></strong>
 <br>
 2. Click on the correct answer to the question
 <br>
-3. As you press an answer, the dial on the bottom will either turn Green or Red. If you get a question right, it turns Green. If you get a question wrong, it turns Red.
+3. As you press an answer, the dial on the bottom will either turn Green or Red. 
+
+Example: If you get a question right, it turns Green.
+
+Example: If you get a question wrong, it turns Red.
+![](https://user-images.githubusercontent.com/57737037/71059001-4bf4d880-2127-11ea-85d2-302bc077a8e3.png)
 <br>
 <br>
 <h2>Prerequisites</h2>
